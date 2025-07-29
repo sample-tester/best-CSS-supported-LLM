@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Landing Page</title>
+    <!-- Poppins Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font family for Poppins */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 min-h-screen text-white">
+
+    <!-- Navbar -->
+    <nav class="p-4 bg-white bg-opacity-10 shadow-lg rounded-b-xl backdrop-blur-sm">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-bold text-white tracking-wide">
+                My<span class="text-indigo-200">App</span>
+            </a>
+
+            <!-- Mobile Menu Button (Hamburger) -->
+            <div class="md:hidden">
+                <button title="sd" id="menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Navigation Links -->
+            <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0">
+                <a href="#" class="block px-4 py-2 text-white hover:text-indigo-200 transition duration-300 rounded-md">Home</a>
+                <a href="#features" class="block px-4 py-2 text-white hover:text-indigo-200 transition duration-300 rounded-md">Features</a>
+                <a href="#contact" class="block px-4 py-2 text-white hover:text-indigo-200 transition duration-300 rounded-md">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+            navLinks.classList.toggle('flex');
+        });
+    </script>
+
+    <!-- Hero Section -->
+    <section class="relative py-20 md:py-32 text-center overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <!-- Background gradient overlay for hero section -->
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-600 to-blue-500 opacity-20 rounded-full blur-3xl scale-150 -z-10"></div>
+
+            <h1 class="text-5xl md:text-7xl font-extrabold leading-tight mb-6 drop-shadow-lg">
+                Unlock Your Creative <span class="text-indigo-200">Potential</span>
+            </h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto mb-10 opacity-90">
+                Discover a world of possibilities with our intuitive tools and stunning design elements.
+                Elevate your projects with ease and precision.
+            </p>
+            <a href="#get-started" class="inline-block bg-white text-purple-600 font-bold py-4 px-10 rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 ease-in-out transform">
+                Get Started Now
+            </a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 md:py-24 bg-white bg-opacity-5 rounded-t-3xl backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 text-white drop-shadow-md">
+                Powerful Features
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature Card 1: Color Palette -->
+                <div class="bg-white bg-opacity-15 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4 text-indigo-200 text-center">🎨</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Intuitive Color Palette</h3>
+                    <p class="text-gray-200 text-center">
+                        Craft perfect color schemes with our easy-to-use palette generator. Find harmony effortlessly.
+                    </p>
+                </div>
+
+                <!-- Feature Card 2: Gradients -->
+                <div class="bg-white bg-opacity-15 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4 text-indigo-200 text-center">🌈</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">Dynamic Gradients</h3>
+                    <p class="text-gray-200 text-center">
+                        Generate breathtaking gradients that add depth and vibrancy to your designs.
+                    </p>
+                </div>
+
+                <!-- Feature Card 3: Accessibility -->
+                <div class="bg-white bg-opacity-15 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-300 ease-in-out">
+                    <div class="text-5xl mb-4 text-indigo-200 text-center">✅</div>
+                    <h3 class="text-2xl font-semibold mb-3 text-white text-center">WCAG Accessibility</h3>
+                    <p class="text-gray-200 text-center">
+                        Ensure your designs are inclusive and meet WCAG standards with built-in checks.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simple Contact Section (for link target) -->
+    <section id="contact" class="py-16 text-center text-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-4">Get in Touch</h2>
+            <p class="text-lg opacity-90">
+                Have questions or feedback? We'd love to hear from you!
+            </p>
+            <p class="text-lg mt-4">
+                <a href="mailto:info@myapp.com" class="text-indigo-200 hover:underline">info@myapp.com</a>
+            </p>
+        </div>
+    </section>
+
+</body>
+</html>
